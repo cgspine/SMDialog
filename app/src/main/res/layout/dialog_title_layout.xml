@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_title_wrap"
+    style="@style/dialog_title_wrap"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/dialog_title"
+        android:text="Dialog Title!" />
+</LinearLayout>

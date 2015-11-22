@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_actions"
+    style="@style/dialog_button_field" >
+
+    <Button
+        android:id="@+id/dialog_action_neutral"
+        style="@style/dialog_button"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/dialog_action_negative"
+        style="@style/dialog_button_negative"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/dialog_action_positive"
+        style="@style/dialog_button_positive"
+        android:visibility="gone" />
+
+</LinearLayout>

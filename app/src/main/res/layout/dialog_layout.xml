@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 提供个外层盒子用于满足一些特殊需求 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/dialog"
+        style="@style/dialog_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+    <View
+        android:id="@+id/anchor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+</LinearLayout>
