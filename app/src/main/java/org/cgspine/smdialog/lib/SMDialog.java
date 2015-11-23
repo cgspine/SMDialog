@@ -222,7 +222,7 @@ public class SMDialog extends Dialog {
 
                             mScrollHeight = Math.max(mScrollHeight,mScrollerView.getMeasuredHeight());
                         }else{
-                            mScrollHeight = onGetScrollHeight();
+                            mScrollHeight =onGetScrollHeight();
                         }
                         if(mAnchorHeight == 0){
                             slp.height = mScrollHeight;
@@ -234,10 +234,11 @@ public class SMDialog extends Dialog {
                     }else{
                         //如果内容过高,anchorSholdHeight=0,但实际下半部分会被截断,因此需要保护
                         //由于高度超过后,actionContainer并不会去测量和布局,所以这里拿不到action的高度,因此用比例估算一个值
-                        int dialogLayoutHeight = mDialogLayout.getMeasuredHeight();
+                        LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mDialogLayout.getLayoutParams();
+                        int dialogLayoutMaxHeight = mScreenHeight - lp.bottomMargin - lp.topMargin - r.top;
                         int scrollLayoutHeight = mScrollerView.getMeasuredHeight();
-                        if(scrollLayoutHeight>dialogLayoutHeight * 0.8){
-                            mScrollHeight = (int) (dialogLayoutHeight * 0.8);
+                        if(scrollLayoutHeight>dialogLayoutMaxHeight * 0.8){
+                            mScrollHeight = (int) (dialogLayoutMaxHeight * 0.8);
                             LinearLayout.LayoutParams slp = (LinearLayout.LayoutParams) mScrollerView.getLayoutParams();
                             slp.height = mScrollHeight;
                             mScrollerView.setLayoutParams(slp);

@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 linearLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                 linearLayout.setPadding(20, 20, 20, 20);
                 linearLayout.setOrientation(LinearLayout.VERTICAL);
-                for(int i=0;i<15;i++){
+                for(int i=0;i<20;i++){
                     EditText editText = new EditText(MainActivity.this);
                     editText.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                     editText.setPadding(20, 20, 20, 20);
