@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import org.cgspine.smdialog.lib.SMDialog;
+import org.cgspine.smdialog.lib.SMDialogBuilder;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
     private Button mButton3;
     private Button mButton4;
     private Button mButton5;
-    SMDialog.DialogBuilder builder1;
-    SMDialog.DialogBuilder builder2;
-    SMDialog.DialogBuilder builder3;
-    SMDialog.DialogBuilder builder4;
-    SMDialog.DialogBuilder builder5;
+    SMDialogBuilder builder1;
+    SMDialogBuilder builder2;
+    SMDialogBuilder builder3;
+    SMDialogBuilder builder4;
+    SMDialogBuilder builder5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        builder1 = new SMDialog.DialogBuilder(this) {
+        builder1 = new SMDialogBuilder(this) {
             @Override
             public View onBuildContent(SMDialog dialog) {
                 LinearLayout linearLayout = new LinearLayout(MainActivity.this);
@@ -175,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
                 return 1200;
             }
         };
-        builder2 = new SMDialog.DialogBuilder(this) {
+        builder2 = new SMDialogBuilder(this) {
             @Override
             public View onBuildContent(SMDialog dialog) {
                 LinearLayout linearLayout = new LinearLayout(MainActivity.this);
@@ -198,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        builder3 = new SMDialog.DialogBuilder(this) {
+        builder3 = new SMDialogBuilder(this) {
             @Override
             public View onBuildContent(SMDialog dialog) {
                 LinearLayout linearLayout = new LinearLayout(MainActivity.this);
@@ -221,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        builder4 = new SMDialog.DialogBuilder(this) {
+        builder4 = new SMDialogBuilder(this) {
             @Override
             public View onBuildContent(SMDialog dialog) {
                 LinearLayout linearLayout = new LinearLayout(MainActivity.this);
@@ -244,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        builder5 = new SMDialog.DialogBuilder(this) {
+        builder5 = new SMDialogBuilder(this) {
             @Override
             public View onBuildContent(SMDialog dialog) {
                 LinearLayout linearLayout = new LinearLayout(MainActivity.this);
